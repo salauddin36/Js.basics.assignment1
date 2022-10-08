@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Assignment</h2>
+
+    <script>
+        //functions
+        function add(a,b){
+            var sum=a+b;
+            console.log(sum);
+        }
+        add(5,6);
+        add(10,20);
+        add(100,200);
+
+        //Array
+
+        //push,unshift,pop,shift
+        var arr=["mechanical","thermal","nuclear","chemical"];
+        console.log(arr);
+        //push
+        arr.push("sonic");
+        console.log(arr);
+        //unshift
+        arr.unshift("ionized");
+        console.log(arr);
+
+        //pop
+        arr.pop();
+        console.log(arr);
+        //shift
+        arr.shift();
+        console.log(arr);
+
+        //objects
+
+        //nesting of objects
+        var studentOne={
+            name: "salauddin",
+            age: 23,
+            gender : "male",
+            address : {
+                area: "kalyanagiri",
+                landmark:"akshay bhandar",
+                city: "Mysore",
+            }
+        }
+        console.log(studentOne);
+        console.log(studentOne.age);
+        console.log(studentOne.address.city);
+
+        //adding new property
+        studentOne.branch="Civil";
+        console.log(studentOne.branch);
+
+        //array of objects
+        console.log("Strongest Team :");
+        var team=[
+            {
+                name:"Stark",
+                age:53,
+                superName:"Iron-man",
+                strength:"intellegent",
+            },
+            {
+                name:"Steve",
+                age:34,
+                superName:"Captain America",
+                strength:"Super human",
+            },
+            {
+                name:"Bruce",
+                age:54,
+                superName:"Hulk",
+                strength:"smart and strong",
+            },
+            {
+                name:"Thor",
+                age:1059,
+                superName:"Thor odinson",
+                strength:"God of thunder",
+            },
+            {
+                name:"peter",
+                age:19,
+                superName:"Spider-man",
+                strength:"Intelligent",
+            },
+            {
+                name:"Clint",
+                age:53,
+                superName:"Hawkeye",
+                strength:"Shield Agent",
+            },
+            {
+                name:"Rhodey",
+                age:55,
+                superName:"War machine",
+                strength:"Amry",
+            },
+            {
+                name:"Samk",
+                age:40,
+                superName:"Falcon",
+                strength:"Army",
+            },
+            {
+                name:"Wanda",
+                age:30,
+                superName:"Scarlett witch",
+                strength:"Magic",
+            },
+            {
+                name:"Strange",
+                age:40,
+                superName:"Dr.strange",
+                strength:"Sorcerer",
+            },
+        ];
+        console.log(team[1]);
+        console.log(team[3]);
+        console.log(team[3]);
+        console.log(team[7]);
+        console.log(team[9]);
+        
+            
+        //only names
+        console.log(""); //for empty line in console
+        for(var i=0;i<team.length;i++){
+            console.log(team[i].name);
+        }
+
+
+        //only supernames
+        console.log(""); //for empty line in console
+        for(var i=0;i<team.length;i++){
+            console.log(team[i].superName);
+        }
+
+
+    </script>
+</body>
+</html>
