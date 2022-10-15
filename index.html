@@ -11,7 +11,7 @@
 
     <script>
         //functions
-        console.log('//function//');
+        console.log('..... function//');
         function add(a,b){
             var sum=a+b;
             console.log(sum);
@@ -23,8 +23,7 @@
         //Array
 
         //push,unshift,pop,shift
-        console.log("");
-        console.log("//push  ,  unshift  ,pop,  shift. //");
+        console.log("..... push  ,  unshift  ,pop,  shift. //");
         var arr=["mechanical","thermal","nuclear","chemical"];
         console.log(arr);
         //push
@@ -44,7 +43,6 @@
         //objects
 
         //nesting of objects
-        console.log('');
         var studentOne={
             name: "salauddin",
             age: 23,
@@ -55,21 +53,19 @@
                 city: "Mysore",
             }
         }
-        console.log('// Nesting of objects //');
+        console.log('..... Nesting of objects //');
         console.log(studentOne);
         console.log(studentOne.age);
         console.log(studentOne.address.city);
 
         //adding new property
-        console.log('');
-        console.log('// Adding new property //');
+        console.log('..... Adding new property //');
         studentOne.branch="Civil";
         console.log(studentOne.branch);
 
 
-        console.log("");
-        //array of objects
-        console.log("Array of objects :");
+        //   JSON -- array of objects
+        console.log("..... Array of objects ://");
         var team=[
             {
                 name:"Stark",
@@ -132,7 +128,7 @@
                 strength:"Sorcerer",
             },
         ];
-        console.log("//1,3,5,7,9 index objects//");
+        console.log(".....  1,3,5,7,9 index objects //");
         console.log(team[1]);
         console.log(team[3]);
         console.log(team[5]);
@@ -141,23 +137,20 @@
         
             
         //only names
-        console.log(""); //for empty line in console
-        console.log("//i.name//"); 
+        console.log("..... i.name//"); 
         for(var i=0;i<team.length;i++){
             console.log(team[i].name);
         }
 
 
         //only supernames
-        console.log(""); //for empty line in console
-        console.log("//i.superName//"); 
+        console.log("..... i.superName//"); 
         for(var i=0;i<team.length;i++){
             console.log(team[i].superName);
         }
  
         //slice and Splice
-        console.log(""); //for empty line in console
-        console.log("Splice and slice"); 
+        console.log("..... Splice and slice//"); 
         var a=["apple","banana","cherry","dragon-fruit","egg"];
         console.log(a);
 
@@ -168,28 +161,25 @@
         console.log(a);
         a.splice(2,3)
         console.log(a);
-        console.log(""); //for empty line in console
+
         //slice
         var a=["apple","banana","cherry","dragon-fruit","egg"];
         console.log(a);
         var b=a.slice(1,3);
         console.log(b);
 
-        console.log(""); //for empty line in console
         //Arrow function
-        console.log("Arrow function");
+        console.log("..... Arrow function//");
         const multiply= (a,b) => a*b;
         console.log(multiply(5,10));
         
-        console.log(""); //for empty line in console
         //foreach method
-        console.log("//forEach method//");
+        console.log("..... forEach method//");
         const array=['black','blue','red','white'];
         array.forEach((d)=>{console.log(d);})
         
-        console.log(""); //for empty line in console
         //map method
-        console.log("//map method//");
+        console.log("..... map method//");
         const number=[1,2,3,4,5];
         const res=number.map(function(item){
             return item*2;
@@ -197,9 +187,8 @@
         console.log(number);
         console.log(res);
 
-        console.log(""); //for empty line in console
         //filter method
-        console.log("//filter method//");
+        console.log("..... filter method//");
         const num=[1,2,3,4,5];
         const res1=num.filter(function(ele){
             return ele>3;
@@ -208,9 +197,8 @@
         console.log(res1);
 
 
-        console.log(""); //for empty line in console
         //reduce method
-        console.log("//reduce method//");
+        console.log("..... reduce method//");
         let arr2=[1,2,3,5,2,1];
         const newarr=arr2.reduce((h1,h2) =>{
             return h1+h2;
@@ -218,9 +206,8 @@
         console.log(arr2);
         console.log(newarr);
 
-        console.log(""); //for empty line in console
         //find method
-        console.log("//find method//");
+        console.log("..... find method//");
         let arr3=[10,20,30,40];
         let found=arr3.find((elem)=>{
             return elem>20;
@@ -234,17 +221,15 @@
         })
         console.log(undef);
 
-        console.log(""); //for empty line in console
         //string literals
-        console.log("//string literals//");
+        console.log(".....string literals..//");
         let fName='john';
         let lName='corner';
         let text=`Welcome ${fName}${lName}`;
         console.log(text);
 
-        console.log(""); //for empty line in console
         //Array destructing
-        console.log("//Array destructing//");
+        console.log("..... Array destructing//");
         var hobby=['painting','art'];
         // console.log(hobby[0]);
         // console.log(hobby[1]);
@@ -252,9 +237,8 @@
         console.log(one);
         console.log(two);
         
-        console.log(""); //for empty line in console
         //Object destructing
-        console.log("//Object destructing//");
+        console.log("..... Object destructing//");
         const person={
             first: 'amir',
             last: 'khan',
@@ -264,6 +248,90 @@
 
         const{first,last,city}=person;
         console.log(first,last,city);
+
+        //this keyword
+        console.log("..... This keyword//");
+        var name='salman';
+        function whoIsThis(){
+            var name='khan';
+            console.log(name);
+            console.log(this.name);
+        }
+        whoIsThis();
+        
+        //method (normal function = object scope)
+        var nam='salman';
+        let persn={
+            nam:'peter',
+            getName:function(){
+                console.log('called getname');
+                console.log(this.nam);
+            }
+        } 
+        console.log(persn);
+        console.log(persn.getName());
+        //method (arrow function = global scope)
+        let pers={
+            nam:'peter',
+            getName:() => {
+                console.log(this.nam);
+            }
+        } 
+        console.log(pers.getName());
+         
+        //array concatination
+        console.log("..... array concatination//");
+
+        //example 1
+        const number1=[3,4,5];
+        const number2=[1,2,6,7];
+        console.log(number2.concat(number1));
+
+        //example 2
+        let color1=["red","green","blue"];
+        let color2=["white","pink"];
+        let color=color1.concat(color2);
+        console.log(color);
+
+        //spread operator
+        console.log("..... Spread operator//");
+
+        //example 1
+        const numb=[3,4,5];
+        const numb1=[1,2,...numb,6,7];
+        console.log(numb);
+        console.log(numb1);
+
+        //example 2
+        const myName="Tony Stark";
+        console.log(myName);
+        console.log(...myName);
+
+        //example 3
+        let n=[1,2,5,8]
+        function addnumb(a,b,c,d){
+            return a+b+c+d;
+        }
+        console.log(addnumb(...n));
+
+        //rest operator
+        console.log("..... rest operator//");
+
+        //example 1
+        function addnum(a,b,...c){
+            return c;
+        }
+        console.log(addnum(1,2,3,4,5,6,7,8));
+
+        //example 2
+        function ele(...a){
+            return a;
+        }
+        console.log(ele(1,2,3,4,5,6));
+
+        //example 3 - array destructuring
+        const [fname,sname,...otherinfo]=["lightning","mcqueen","racecar","radiator springs","mater","95","piston cup"];
+        console.log(otherinfo);
         </script>
 </body>
 </html>
